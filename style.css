@@ -1,0 +1,16 @@
+code {
+  border-radius: 7px;
+}
+
+#wrapper {
+  margin-top: 10px;
+}
+
+.slide {
+  font-size: 27px;
+}
+
+.slide ul {
+  font-size: 25px;
+  line-height: 30px;
+}
