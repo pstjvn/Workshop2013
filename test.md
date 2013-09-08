@@ -3,7 +3,7 @@ output: test.html
 controls: false
 
 --
-# SPA in 2013
+# SPA
 ## JavaScript and single page apps
 ## Peter Janakiev
 ## [regardingscot@gmail.com](mailto:regardingscot@gmail.com)
@@ -84,7 +84,7 @@ Mostly a mess of tricks and quirks:
 
 New bread of apps (Gmail): (circa 2005)
 
-![](gmail.png)
+## ![](gmail.jpg)
 
 --
 
@@ -130,7 +130,7 @@ Made it much easier to deal with browsers and allowed to start thinking more for
 
 ### History
 
-## Make inheritance and mixins easier:
+## Mootools - Makes inheritance and mixins easier:
 
     myClass = new Class({
       Extends: [],
@@ -148,7 +148,23 @@ Made it much easier to deal with browsers and allowed to start thinking more for
 
 ### History
 
-2009 - 2011
+## The new kind of apps (full screen, very interactive)
+
+## ![](famous.jpg)
+
+--
+
+### History
+
+## Physics engine (base for 2d games)
+
+## ![](box2d.jpg)
+
+--
+
+### History
+
+2009 - 2012
 
 ES5, Array methods, shims and polifils become the base for larger projects and frameworks
 
@@ -166,6 +182,7 @@ Vendors start to implements all sort of interesting features to make it easier t
 * Video / Audio
 * WebGL
 * WebSocket (tcp -> latency).
+* localStorage, webSQL, IndexedDB
 
 --
 
@@ -259,73 +276,263 @@ There comes the "ninja" (no, not THAT "ninja")!
 
 ### Today
 
+The developer should consider much more than the language itself.
+
+* number of requests
+* selector complexity
+* dependency management (for JS and for CSS)
+* templating language
+* backend / frontend rendering
+* SEO for SPA (what??)
+* source code control
+* automation and testing
+
 --
 
-### History
+### Today
+
+## How did we got here?
+
+## Technology evolution.
+--
+
+### Ajax
+
 AJAX - Initially used for XML with XSLT in the browser (as designed by MicoSoft)
 
-[www.backbase.com/portal-software]() - Initially developer an Ajax library trying to sell it, later reorganized into portal software and later still specialized in banking business.
---
-### History
+[www.backbase.com/portal-software](www.backbase.com/portal-software) - Initially developed an Ajax library trying to sell it, later reorganized into portal software and later still specialized in banking business.
 
-* Fetch the xml and the xsl, transform the node and insert it in the document.
+Today still uses XSLT to operate on data. Good news is Web Component.
+
+Other legacy software.
+
+--
+### Ajax for XML (how did it work)
+
+* Fetch the xml and the xsl, transform the root node and insert it in the document.
 * Deigned for viewing data, not interacting (innerHTML, replace/add node).
 * Poor support in non-IE browsers.
+
 --
-### History
+
+### Ajax + JSON
 
 JSON - structured serilization of data that can be parsed right into live JS objects
 
+Circa 2006
+
 * eval
 * later - JSON.parse
+
+Much better than XML, but basically used the same ways initially (parse, render using DOM APIs)
+
 --
-### History
-Emerging frameworks
+### Frameworks (2008-...)
 
 The monoliths
 
 * dojo
 * YUI
 * other..
+
 --
-### History
+
+### New players
 
 Data binding: one way, two way, sync
 
 Backbone, Meteor, AngularJS, Ember etc.
 
 --
+
+### Closure compiler
+
+Developed in-house, uses Rhino to parse ES4 style comments and creates AST.
+
+* Its Java
+* Understands only a small subset of the language
+* Tree-shaking and inlining / renaming - win (for those who are willing to rewrite all).
+
+Do not blindly trust the experts!
+
+--
+
+### JS loaders and minifiers
+
+Circa 2008-2009 more than a dozen of them in the wild with different rate of usefulness.
+
+Lots of "custom" loader code (pretty much the same as 'document.write')
+
+White space stripping is considered 'minification'.
+
+Needed solution because projects get bigger and bigger.
+
+--
+
+### UglifyJS and RequireJS
+
+Made possible by nodejs (4 years ago - 2009).
+
+While still no concensus on it, pretty much the standard.
+
+More than white space removal - real AST of the code.
+
+No cencensus on the "right" module pattern (AMD vs CommonJS)
+
+--
+
+### In style
+
+Less, Sass, Gss.. - make your pick.
+
+Templates - basically the same old story (will probably change with Web Components).
+
+Much better than JS (but still manual dependency management and no straight forward way to require css from code logic)
+
+--
+
+### Popular kids on the block
+
+* Bower
+* Yeoman
+* HTML5 boilerplate
+* Bootstrap
+* jQuery UI / jQuery Mobile
+
+## Pretty much you are set... unless you are building a new UX/interaction
+
+--
+
+### Back to the present
+
+## Wellcome to 2013 - everything is "mobile first".
+
+## Its like the 2005, same CPU / RAM available, but this time we have GPU. Unless we dont.
+
+--
+
+### UX/Interaction
+
+What to do when the solution is simply not there?
+
+* grasp as much of what is out there as possible
+* strategize (style?)
+* choose solution (benchmarking)
+* backward compat?
+
+--
+
 ### History
-In the same time at Netflix and other content providers:
 
-* People still prefer to consume content on the bigger screen (TV)
-* STB devices are really slow and have miniscule amounts of RAM
-* Smart TVs are still an idea in someone elses head
---
-### History
+## How some companies did it?
 
-The problem: while libraries exists and have good performance and cost effecitveness for the Desktop, on low powered device the solutions simply do not work:
-
-* craches
-* lags
-* different set of user interactions
 --
 
-### Examples
-## Longa.com
-## ![](longa.jpg)
-~ 340k LOC / 312KB
+### Netflix
+
+Largest content provider in the US.
+
+Client for all major platforms (including game consoles, handhels etc).
+
+Decided to go with WebKit.
+
 --
-### Examples
-## Longa.com
-## ![](longa.jpg)
+
+### Netflix - not so fast!
+
+The solution seemed easy - modern rendering engine with modern JS engine - win!
+
+Not really - very low powered, very memory contrained. It simply did not work.
+
 --
-### Examples
-## Longa.com
-## ![](longa.jpg)
+
+### Netflix - solving it.
+
+* Use of transforms and translations.
+* Reuse DOM nodes
+* Reuse JS Objects (Pooling)
+
+"Infinite" scroll behavior.
+
+[Netflix and webUI](http://techblog.netflix.com/search/label/HTML5)
+
 --
+
+### Netflix - conclusion
+
+You cannot simply visualize 10,000+ items and expect every device to behave.
+
+We still use tricks and optimizations (just like in the old days).
+
+However we have understanding of structure, reusability patterns and testing.
+
+--
+
+### Can we use it?
+
+Yes, you can!
+
+Example: [longa.com/cgi-bin/if.cgi?run=mtvapp&nstableview](longa.com/cgi-bin/if.cgi?run=mtvapp&nstableview)
+
+--
+
+### Google - animation and image loading.
+
+GPU acceleration for your animations (translate3d).
+
+Layer invalidation?
+
+What can we do about it?
+
+--
+
+### Google & Microsoft
+
+NextTick - execute code right after the exit of our call stack
+
+What is wrong with setTimeout(function() {}, *0*)
+
+[jsperf - setTimeout vs nextTick](http://jsperf.com/settimeout-vs-nexttick-polyfill)
+
+[nexttick.js](https://code.google.com/p/closure-library/source/browse/closure/goog/async/nexttick.js)
+
+Be careful with jsPerf!
+
+--
+
+### Mozilla - we will not support h264!
+
+But we have asm.js - just compile your decoder, please:-)
+
+[Broadway](https://github.com/mbebenita/Broadway) - H264 decoder in JavaScript.
+
+Emscripten (no, it is not handwritten)
+
+--
+
+### Facebook vs Sencha
+
+Facebook - html5 / js is a failure.
+
+Sencha - no it is not, its just that you cannot do it right!
+
+[HTML5 love story](http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story)
+
+--
+
+### A word for Facebook
+
+* Everyday release (first popularized by Google) - lots of broken stuff but lots of new features and hot fixes.
+* React framework - a little too late, but a few good ideas.
+* Already implemented in all major frameworks.
+
+--
+
+### Lets get to work!
+
+--
+
 # Questions?
 ## Get in touch
-## [pstj.blogspot.com]()
 ## [gtalk:regardingscot@gmail.com]()
 
