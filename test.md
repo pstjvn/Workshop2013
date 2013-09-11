@@ -3,8 +3,8 @@ output: test.html
 controls: false
 
 --
-# SPA
-## JavaScript and single page apps
+# Web apps
+## JavaScript and single page applications
 ## Peter Janakiev
 ## [regardingscot@gmail.com](mailto:regardingscot@gmail.com)
 
@@ -111,7 +111,7 @@ Develops Closure tools in-house and uses it to refocus Java devs to JavaScript
 During the same time in the wild:
 
 * jQuery
-* MooTools (takes on "classes")
+* MooTools
 * Prototype
 
 --
@@ -262,7 +262,7 @@ Lots of tools for lots of tasks:
 
 ### Today
 
-The developer is reading most of the time and trying to make things work together. In lots of tasks there is a solution around the corner and with a little more reading / tweking it can just work...
+The developer is reading most of the time and trying to make things work together. In lots of tasks there is a solution around the corner and with a little more reading / tweaking it can just work...
 
 --
 
@@ -530,9 +530,71 @@ Sencha - no it is not, its just that you cannot do it right!
 
 ### Lets get to work!
 
+* What is *__RAF__*
+* What is *__setImmediate__*
+* Why should we care
+
+--
+
+### Developer console
+
+## Know your tools!
+
+    alert('Debug me!');
+
+Network activity, timeline, frames, JS mem stack, CPU profiles and more
+
+--
+
+### Exercise 1
+
+[Timeline js](https://github.com/ouhouhsami/timeline-js)
+
+* very simple
+* clean code
+* lots of opportunities for optimization
+
+--
+
+### Exercise 1
+
+Repo:
+
+[]()
+
+--
+
+### Exercise 2
+
+NSTableView
+
+* Implementation for the browser
+* Sencha, Netflix, etc.
+* Applications?
+
+--
+
+### Excercise 2
+
+Example implmentation:
+
+[]()
+
+How to improve it?
+
+--
+
+### Other exercises
+
+Google+ photo view
+
+Google+ communities / profile page with lots of entries
+
 --
 
 # Questions?
+
 ## Get in touch
+
 ## [gtalk:regardingscot@gmail.com]()
 
