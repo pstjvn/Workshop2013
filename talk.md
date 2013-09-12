@@ -562,11 +562,9 @@ Download the code
 
     git clone URL
 
-Repo:
+Repo: [http://goo.gl/It9NfL](http://goo.gl/It9NfL)
 
-[http://goo.gl/It9NfL](http://goo.gl/It9NfL)
-
-exercise/1/index.html
+    exercise/1/index.html
 
 --
 
@@ -582,7 +580,7 @@ NSTableView
 
 ### Excercise 2
 
-exercise/2/index.html
+    exercise/2/index.html
 
 How to improve it?
 

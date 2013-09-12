@@ -11,7 +11,8 @@ function RAF(callback, handler) {
   this.id = 0;
   this.bound = function(ms) {
     this.started_ = false;
-    this.callback.call(this.handler, ms);
+    // Override the default behaviour of using time offset.
+    this.callback.call(this.handler, Date.now());
   }.bind(this);
 }
 
@@ -30,6 +31,10 @@ RAF.prototype.start = function() {
   this.started_ = true;
 };
 
+RAF.prototype.isActive = function() {
+  return this.started_;
+};
+
 /**
  * Remove the function from the call stack if it is still there.
  */
@@ -37,4 +42,40 @@ RAF.prototype.stop = function() {
   if (!this.started_) return;
   RAF.craf.call(window, this.id);
   this.started_ = false;
+};
+
+function Delay(callback, timeout, handler) {
+  this.callback = callback;
+  this.handler = handler;
+  this.timeout = timeout;
+  this.id = 0;
+  this.bound = this.doAction.bind(this);
+}
+
+Delay.prototype.doAction = function() {
+  this.callback.call(this.handler);
+  this.id = 0;
+};
+
+Delay.prototype.start = function() {
+  if (this.id != 0) {
+    this.stop();
+  }
+  this.id = setTimeout(this.bound, this.timeout);
+};
+
+Delay.prototype.stop = function() {
+  if (this.id != 0) {
+    clearTimeout(this.id);
+    this.id = 0;
+  }
+};
+
+var css = {
+  setTranslation: function(el, x, y, unit, append) {
+    if (!unit) unit = 'px';
+    if (!append) append = '';
+    el.style.WebkitTransform = 'translate3d(' + x + unit + ',' +
+        y + unit + ',0)' + append;
+  }
 };
