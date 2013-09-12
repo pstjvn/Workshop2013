@@ -558,9 +558,15 @@ Network activity, timeline, frames, JS mem stack, CPU profiles and more
 
 ### Exercise 1
 
+Download the code
+
+    git clone URL
+
 Repo:
 
-[]()
+[http://goo.gl/It9NfL](http://goo.gl/It9NfL)
+
+exercise/1/index.html
 
 --
 
@@ -576,9 +582,7 @@ NSTableView
 
 ### Excercise 2
 
-Example implmentation:
-
-[]()
+exercise/2/index.html
 
 How to improve it?
 
