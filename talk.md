@@ -321,10 +321,28 @@ JSON - structured serilization of data that can be parsed right into live JS obj
 
 Circa 2006
 
+Google's products
+
 * eval
 * later - JSON.parse
 
 Much better than XML, but basically used the same ways initially (parse, render using DOM APIs)
+
+
+--
+### Ajax and binary
+
+ProtoBuffers
+
+Lazy parse, multiple serialization formats (Google still uses string serialization for compatibility with older browsers).
+
+
+--
+### Realtime
+
+WebSocket - text and binary
+
+TCP is not UDP!
 
 --
 ### Frameworks (2008-...)
@@ -337,14 +355,18 @@ The monoliths
 
 --
 
-### New players
+### Frameworks (2011-...)
 
 Data binding: one way, two way, sync
 
 Backbone, Meteor, AngularJS, Ember etc.
 
 --
+### Instrumentation
 
+## Know your tools! Love your compiler!
+
+--
 ### Closure compiler
 
 Developed in-house, uses Rhino to parse ES4 style comments and creates AST.
