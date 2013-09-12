@@ -591,9 +591,9 @@ How to improve it?
 
 ### Other exercises
 
-Google+ photo view
+Google+ photo view [http://goo.gl/Z0tYxW](http://goo.gl/Z0tYxW)
 
-Google+ communities / profile page with lots of entries
+Google+ communities / profile page with lots of entries (Scienece on G+)
 
 --
 
