@@ -584,6 +584,9 @@ NSTableView
 
 How to improve it?
 
+* Try making the cell taller and add image(s).
+* Scheduled rasterization (raf or nexttick?).
+
 --
 
 ### Other exercises

@@ -133,7 +133,6 @@ _.setChildHeight = function(height) {
 
 
 _.handleTouchStart = function(e) {
-  console.log('aaas')
   if (e.target != this.element) {
     this.isAnimating_ = false;
     this.cache_[CP.NEEDS_MOMENTUM] = 0;
@@ -164,7 +163,6 @@ _.paintNotify = function() {
 };
 
 _.handleTouchMove = function(e) {
-  console.log('sasa')
   if (this.ignoreEndEvents_) return;
   if (e.target != this.element) {
     e.stopPropagation();
@@ -285,7 +283,6 @@ _.isBeyoundEdge = function() {
 _.handleMomentum = function(ts) {
   if (this.isAnimating_) {
     this.momentumRaf_.start();
-    console.log(this.cache_[CP.ANIMATION_DESIRED_END_TIME], ts);
     if (ts >= this.cache_[CP.ANIMATION_DESIRED_END_TIME]) {
       this.isAnimating_ = false;
       this.cache_[CP.HANDLER_CURRENT_Y] =
@@ -398,7 +395,6 @@ _.getChildByOffsetIndex = function(index) {
 };
 
 _.applyStyles = function() {
-  console.log('setting trans')
   for (var i = 0, len = this.children.length; i < len; i++) {
     css.setTranslation(this.getChildByOffsetIndex(i), 0,
         ((i * this.childHeight_) + this.visualOffset_));
