@@ -1,5 +1,5 @@
 title: JavaScript and single page applications
-output: test.html
+output: talk.html
 controls: false
 
 --
@@ -547,6 +547,24 @@ Sencha - no it is not, its just that you cannot do it right!
 * Everyday release (first popularized by Google) - lots of broken stuff but lots of new features and hot fixes.
 * React framework - a little too late, but a few good ideas.
 * Already implemented in all major frameworks.
+
+
+--
+### Examples!
+
+## ![](math1.png)
+
+--
+
+### Examples!
+
+## ![](math2.png)
+
+--
+
+### Examples
+
+## Should be done right!
 
 --
 
